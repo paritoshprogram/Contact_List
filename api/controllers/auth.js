@@ -208,7 +208,10 @@ module.exports.logout = (req,res) =>{
 
     localStorage.removeItem('token');
 
-    res.redirect('/auth/login')
+    console.log("logged out")
+
+    res.redirect(200,'/auth/login')
+
 }
 
 

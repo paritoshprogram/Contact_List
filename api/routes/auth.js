@@ -23,6 +23,7 @@ router.post("/login",authController.login,(req,res)=>{
     {
         const id = req.body.username
         console.log(res.statusCode)
+        console.log(id+" is logged in")
 
         return res.redirect(`/auth/profile/${id}`)
     }
@@ -32,7 +33,7 @@ router.post("/login",authController.login,(req,res)=>{
     }
 })
 
-router.get("/logout",authController.logout)
+router.post("/logout",authController.logout)
 
 
 module.exports = router
